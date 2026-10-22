@@ -1,0 +1,11 @@
+# ~/.config/systemd/user/container-prune.timer
+[Unit]
+Description=Weekly timer for container host garbage collection
+
+[Timer]
+OnCalendar=Sun *-*-* 03:00:00
+Persistent=true
+RandomizedDelaySec=15m
+
+[Install]
+WantedBy=timers.target
